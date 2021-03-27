@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title></title>
+    <style>
+        .mb-3 div {
+            display: flex;
+        }
+
+        .mb-3 div span {
+            font-weight: bold;
+        }
+
+        .mb-3 > div > input {
+            margin: 0 10px;
+        }
+        
+        .form-range {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div clss="row">
+            <div class="col-sm">
+                <img width="250" src="wired-brain-coffee-logo.png" />
+                <h3>
+                    <small class="text-muted">Customer Satisfaction Survey</small>
+                </h3>
+                <br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="customRange1" class="form-label">How would you rate our customer service?</label>
+                        <div><span>1</span><input type="range" min="0" max="10" class="form-range" id="customRange1"><span>10</span></div>
+                    </div>
+                    <br />
+                    <div class="mb-3">
+                        <label for="customRange1" class="form-label">How would you rate the taste and quality of our coffee?</label>
+                        <div><span>1</span><input type="range" min="0" max="10" class="form-range" id="customRange1"><span>10</span></div>
+                    </div>
+                    <br />
+                    <div class="mb-3">
+                        <label for="customRange1" class="form-label">How would you rate our pricing?</label>
+                        <div><span>1</span><input type="range" min="0" max="10" class="form-range" id="customRange1"><span>10</span></div>
+                    </div>
+                    <br />
+                    <div class="mb-3">
+                        <label for="customRange1" class="form-label">How would you the taste and quality of our food?</label>
+                        <div><span>1</span><input type="range" min="0" max="10" class="form-range" id="customRange1"><span>10</span></div>
+                    </div>
+                    <br />
+                    <div class="mb-3">
+                        <label for="customRange1" class="form-label">How likely are you to recommend us to a friend?</label>
+                        <div><span>1</span><input type="range" min="0" max="10" class="form-range" id="customRange1"><span>10</span></div>
+                    </div>
+                    <br />
+                    <select class="form-select" aria-label="What is your favorite product?">
+                        <option selected>Favorite Product</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <br />
+                    <select class="form-select" aria-label="What is your least favorite product?">
+                        <option selected>Least Favorite Product</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <br />
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Comments</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                    <br />
+                    <br />
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
