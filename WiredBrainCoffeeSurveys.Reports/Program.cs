@@ -20,7 +20,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             bool customersRecommend = Q1Results.WouldRecommend >= 7;
             bool noGranolaYesCappucino = Q1Results.LeastFavoriteProduct == "Granola" && Q1Results.FavoriteProduct == "Cappucino";
 
-            Console.WriteLine($"Coffee Score Higher Than Food: {higherCoffeeScore}");
+            Console.WriteLine($"Coffee Score Higher Than Food: {isCoffeeScoreLower}");
             Console.WriteLine($"Customers Would Recommend Us: {customersRecommend}");
             Console.WriteLine($"Hate Granola, Love Cappucino: {noGranolaYesCappucino}");
         }
