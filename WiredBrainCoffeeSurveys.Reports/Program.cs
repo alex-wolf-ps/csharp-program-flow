@@ -16,7 +16,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             Console.WriteLine($"Overall Score: {overallScore}");
 
             // Logical comparisons
-            bool higherCoffeeScore = Q1Results.CoffeeScore > Q1Results.FoodScore;
+            bool isCoffeeScoreLower = Q1Results.CoffeeScore > Q1Results.FoodScore;
             bool customersRecommend = Q1Results.WouldRecommend >= 7;
             bool noGranolaYesCappucino = Q1Results.LeastFavoriteProduct == "Granola" && Q1Results.FavoriteProduct == "Cappucino";
 
