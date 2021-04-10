@@ -15,7 +15,6 @@ namespace WiredBrainCoffeeSurveys.Reports
         {
             var tasks = new List<string>();
 
-            // Calculated Values
             double responseRate = Q1Results.NumberResponded / Q1Results.NumberSurveyed;
             double overallScore = (Q1Results.ServiceScore + Q1Results.CoffeeScore + Q1Results.FoodScore + Q1Results.PriceScore) / 4;
 
@@ -51,12 +50,12 @@ namespace WiredBrainCoffeeSurveys.Reports
                 case "RewardsProgram":
                     tasks.Add("Revisit the rewards deals.");
                     break;
-
                 case "Cleanliness":
                     tasks.Add("Contact the cleaning vendor.");
                     break;
                 case "MobileApp":
                     tasks.Add("Contact the consulting firm about app.");
+                    break;
                 default:
                     tasks.Add("Investigate individual comments for ideas.");
                     break;
