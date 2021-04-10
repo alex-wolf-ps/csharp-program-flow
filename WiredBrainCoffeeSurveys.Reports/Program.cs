@@ -55,13 +55,8 @@ namespace WiredBrainCoffeeSurveys.Reports
                 case "Cleanliness":
                     tasks.Add("Contact the cleaning vendor.");
                     break;
-
-                case var improve when improve.Length > 5:
-                    tasks.Add("Stuff.");
-                    break;
-                case var test2 when test2.Length > 6:
-                    tasks.Add("Stuff.");
-                    break;
+                case "MobileApp":
+                    tasks.Add("Contact the consulting firm about app.");
                 default:
                     tasks.Add("Investigate individual comments for ideas.");
                     break;
