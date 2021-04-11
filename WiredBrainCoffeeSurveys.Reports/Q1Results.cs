@@ -83,7 +83,7 @@ namespace WiredBrainCoffeeSurveys.Reports
                 FavoriteProduct = "Cappucino",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 4.0,
-                Comments = "Your prices are much higher than the surrounding stores."
+                Comments = "The pickup area should be by the door. Also Your prices are much higher than the surrounding stores."
             },
             new SurveyResponse()
             {
@@ -134,8 +134,8 @@ namespace WiredBrainCoffeeSurveys.Reports
                 AreaToImprove = "MobileApp",
                 FavoriteProduct = "Green tea macha",
                 LeastFavoriteProduct = "Fruit",
-                WouldRecommend = 7.5,
-                Comments = "My favorite cofeee place!"
+                WouldRecommend = 6.5,
+                Comments = "So close to recommending but your prices are so high."
             }
         };
     }
