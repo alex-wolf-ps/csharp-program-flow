@@ -30,14 +30,15 @@ namespace WiredBrainCoffeeSurveys.Reports
 
         public static double NumberRewardsMembers { get; set; } = 130;
 
+        // Individual survey responses
         public static List<SurveyResponse> Responses = new List<SurveyResponse>()
         {
             new SurveyResponse()
             {
-                EmailAddress = "test@sample.com",
+                EmailAddress = "test1@sample.com",
                 CoffeeScore = 8.0,
-                FoodScore = 7.0,
-                PriceScore = 6.5,
+                FoodScore = 9.0,
+                PriceScore = 7.0,
                 ServiceScore = 8.5,
                 AreaToImprove = "MobileApp",
                 FavoriteProduct = "Latte",
@@ -47,20 +48,20 @@ namespace WiredBrainCoffeeSurveys.Reports
             },
             new SurveyResponse()
             {
-                EmailAddress = "test@sample.com",
-                CoffeeScore = 8.0,
-                FoodScore = 7.0,
-                PriceScore = 6.5,
-                ServiceScore = 8.5,
+                EmailAddress = "test2@sample.com",
+                CoffeeScore = 10.0,
+                FoodScore = 6.0,
+                PriceScore = 7.0,
+                ServiceScore = 7.5,
                 AreaToImprove = "MobileApp",
                 FavoriteProduct = "Cappucino",
                 LeastFavoriteProduct = "Fruit",
-                WouldRecommend = 5.0,
-                Comments = "Your mobile app is not very user friendly and prices are too high."
+                WouldRecommend = 8.0,
+                Comments = "The mobile app looks bad on Android devices."
             },
             new SurveyResponse()
             {
-                EmailAddress = "test@sample.com",
+                EmailAddress = "test3@sample.com",
                 CoffeeScore = 8.0,
                 FoodScore = 7.0,
                 PriceScore = 6.5,
@@ -69,24 +70,24 @@ namespace WiredBrainCoffeeSurveys.Reports
                 FavoriteProduct = "Americano",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 8.0,
-                Comments = "The store I went into was not clean."
+                Comments = "Overall I had a great experience, I like the store design."
             },
             new SurveyResponse()
             {
-                EmailAddress = "test@sample.com",
-                CoffeeScore = 8.0,
-                FoodScore = 7.0,
-                PriceScore = 6.5,
+                EmailAddress = "test4@sample.com",
+                CoffeeScore = 9.0,
+                FoodScore = 5.0,
+                PriceScore = 7.5,
                 ServiceScore = 8.5,
-                AreaToImprove = "MobileApp",
+                AreaToImprove = "Pricing",
                 FavoriteProduct = "Cappucino",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 4.0,
-                Comments = "Your prices are higher than the surrounding stores."
+                Comments = "Your prices are much higher than the surrounding stores."
             },
             new SurveyResponse()
             {
-                EmailAddress = "test@sample.com",
+                EmailAddress = "test5@sample.com",
                 CoffeeScore = 8.0,
                 FoodScore = 7.0,
                 PriceScore = 6.5,
@@ -99,7 +100,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             },
             new SurveyResponse()
             {
-                EmailAddress = "test@sample.com",
+                EmailAddress = "test6@sample.com",
                 CoffeeScore = 8.0,
                 FoodScore = 7.0,
                 PriceScore = 6.5,
@@ -107,8 +108,34 @@ namespace WiredBrainCoffeeSurveys.Reports
                 AreaToImprove = "MobileApp",
                 FavoriteProduct = "Green tea macha",
                 LeastFavoriteProduct = "Fruit",
-                WouldRecommend = 7.0,
-                Comments = "Your staff are very friendly."
+                WouldRecommend = 7.5,
+                Comments = "Your staff are very friendly but your mobile app is too slow."
+            },
+            new SurveyResponse()
+            {
+                EmailAddress = "test7@sample.com",
+                CoffeeScore = 8.0,
+                FoodScore = 7.0,
+                PriceScore = 6.5,
+                ServiceScore = 8.5,
+                AreaToImprove = "MobileApp",
+                FavoriteProduct = "Green tea macha",
+                LeastFavoriteProduct = "Fruit",
+                WouldRecommend = 7.5,
+                Comments = "The mobile app doesn't work on tablets."
+            },
+            new SurveyResponse()
+            {
+                EmailAddress = "test8@sample.com",
+                CoffeeScore = 8.0,
+                FoodScore = 7.0,
+                PriceScore = 6.5,
+                ServiceScore = 8.5,
+                AreaToImprove = "MobileApp",
+                FavoriteProduct = "Green tea macha",
+                LeastFavoriteProduct = "Fruit",
+                WouldRecommend = 7.5,
+                Comments = "My favorite cofeee place!"
             }
         };
     }
