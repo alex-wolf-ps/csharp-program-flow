@@ -44,7 +44,7 @@ namespace WiredBrainCoffeeSurveys.Reports
                 FavoriteProduct = "Latte",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 8.0,
-                Comments = "Coffee and service are great!"
+                Comments = "Your mobile app is too slow."
             },
             new SurveyResponse()
             {
@@ -109,7 +109,7 @@ namespace WiredBrainCoffeeSurveys.Reports
                 FavoriteProduct = "Green tea macha",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 7.5,
-                Comments = "Your staff are very friendly but your mobile app is too slow."
+                Comments = "Your staff are very friendly but your mobile app UI is too hard to use."
             },
             new SurveyResponse()
             {
@@ -122,7 +122,7 @@ namespace WiredBrainCoffeeSurveys.Reports
                 FavoriteProduct = "Green tea macha",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 7.5,
-                Comments = "The mobile app doesn't work on tablets."
+                Comments = "The mobile app is very slow during check out."
             },
             new SurveyResponse()
             {
@@ -131,7 +131,7 @@ namespace WiredBrainCoffeeSurveys.Reports
                 FoodScore = 7.0,
                 PriceScore = 6.5,
                 ServiceScore = 8.5,
-                AreaToImprove = "MobileApp",
+                AreaToImprove = "Pricing",
                 FavoriteProduct = "Green tea macha",
                 LeastFavoriteProduct = "Fruit",
                 WouldRecommend = 6.5,
