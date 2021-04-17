@@ -34,7 +34,7 @@ namespace WiredBrainCoffeeSurveys.Reports
                 counter++;
             }
 
-            File.WriteAllLines("WinnersReport.txt", selectedEmails);
+            File.WriteAllLines("WinnersReport.csv", selectedEmails);
         }
 
         public static void GenerateCommentsReport()
