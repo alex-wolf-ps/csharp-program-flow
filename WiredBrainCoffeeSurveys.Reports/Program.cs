@@ -106,18 +106,9 @@ namespace WiredBrainCoffeeSurveys.Reports
             double overallScore = (results.ServiceScore + results.CoffeeScore + results.FoodScore + results.PriceScore) / 4;
 
             if (results.CoffeeScore < results.FoodScore)
-            {
                 tasks.Add("Investigate coffee recipes and ingredients.");
-            }
 
-            if (overallScore > 8.0)
-            {
-                tasks.Add("Work with leadership to reward staff");
-            }
-            else
-            {
-                tasks.Add("Work with employees for improvement ideas.");
-            }
+            tasks.Add(overallScore > 8.0 ? "Work with leadership." : "Work with employees for ideas.");
 
             if (responseRate < .33)
             {
@@ -132,21 +123,13 @@ namespace WiredBrainCoffeeSurveys.Reports
                 tasks.Add("Rewards participants with discount coffee coupon.");
             }
 
-            switch (results.AreaToImprove)
+            tasks.Add(results.AreaToImprove switch
             {
-                case  "RewardsProgram":
-                    tasks.Add("Revisit the rewards deals.");
-                    break;
-                case "Cleanliness":
-                    tasks.Add("Contact the cleaning vendor.");
-                    break;
-                case "MobileApp":
-                    tasks.Add("Contact the consulting firm about app.");
-                    break;
-                default:
-                    tasks.Add("Investigate individual comments for ideas.");
-                    break;
-            }
+                "RewardsProgram" => "Revisit the rewards deals.",
+                "Cleanliness" => "Contact the cleaning vendor",
+                "MobileApp" => "Contact the consulting firm about the app.",
+                _ => "Investigate individual comments for ideas."
+            });
 
             Console.WriteLine(Environment.NewLine + "Tasks Output:");
             foreach(var task in tasks)
