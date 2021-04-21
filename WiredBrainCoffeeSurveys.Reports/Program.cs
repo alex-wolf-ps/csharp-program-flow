@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace WiredBrainCoffeeSurveys.Reports
 {
@@ -10,7 +11,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             GenerateTasksReport();
         }
 
-        static void GenerateTasksReport()
+        public static void GenerateTasksReport()
         {
             var tasks = new List<string>();
 
@@ -19,38 +20,44 @@ namespace WiredBrainCoffeeSurveys.Reports
 
             if (Q1Results.CoffeeScore < Q1Results.FoodScore)
             {
-                tasks.Add("Revisit recipes for quality and taste.");
+                tasks.Add("Investigate coffee recipes and ingredients.");
             }
 
-            double rewardsMemberPercentage = Q1Results.NumberRewardsMembers / Q1Results.NumberResponded;
-
-            if (rewardsMemberPercentage < .25)
+            if (overallScore > 8.0)
             {
-                Console.WriteLine("Todo: Use the funds to market the rewards program");
-            }
-            else if (rewardsMemberPercentage > .25 && rewardsMemberPercentage < .75)
-            {
-                Console.WriteLine($"Todo: Use the funds to give coffee to the percent of loyal customers.");
+                tasks.Add("Work with leadership to reward staff");
             }
             else
             {
-                Console.WriteLine("Todo: Use the funds to give them 10% off!");
+                tasks.Add("Work with employees for improvement ideas.");
             }
 
+            if (responseRate < .33)
+            {
+                tasks.Add("Research options to improve response rate.");
+            }
+            else if (responseRate > .33 && responseRate < .66)
+            {
+                tasks.Add("Reward participants with free coffee coupon.");
+            }
+            else
+            {
+                tasks.Add("Rewards participants with discount coffee coupon.");
+            }
 
             switch (Q1Results.AreaToImprove)
             {
-                case "Service":
-                    Console.Write("ToDo: Speak with service manager");
-                    break;
-                case "Pricing":
-                    Console.WriteLine("ToDo: Work with suppliers to lower costs");
+                case "RewardsProgram":
+                    tasks.Add("Revisit the rewards deals.");
                     break;
                 case "Cleanliness":
-                    Console.WriteLine("Todo: Research dedicated cleaning service options.");
+                    tasks.Add("Contact the cleaning vendor.");
+                    break;
+                case "MobileApp":
+                    tasks.Add("Contact the consulting firm about app.");
                     break;
                 default:
-                    Console.WriteLine("Check the comments to get ideas");
+                    tasks.Add("Investigate individual comments for ideas.");
                     break;
             }
         }
