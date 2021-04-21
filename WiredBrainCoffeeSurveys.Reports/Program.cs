@@ -25,7 +25,7 @@ namespace WiredBrainCoffeeSurveys.Reports
             {
                 var currentItem = Q1Results.Responses[counter];
 
-                if (currentItem.FavoriteProduct == "Cappucino")
+                if (currentItem.FavoriteProduct == Q1Results.FavoriteProduct)
                 {
                     selectedEmails.Add(currentItem.EmailAddress);
                     Console.WriteLine(currentItem.EmailAddress);
