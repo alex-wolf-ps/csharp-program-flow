@@ -18,29 +18,33 @@ namespace WiredBrainCoffeeSurveys.Reports
                 Console.WriteLine("Please specify a report to run (rewards, comments, tasks, quit):");
                 var selectedReport = Console.ReadLine();
 
-                Console.WriteLine("Please specify which quarter of data: (q1, q2)");
-                var selectedData = Console.ReadLine();
-
-                var surveyResults = JsonConvert.DeserializeObject<SurveyResults>
-                    (File.ReadAllText($"data/{selectedData}.json"));
-
-                switch (selectedReport)
+                if (selectedReport == "quit")
                 {
-                    case "rewards":
-                        GenerateWinnerEmails(surveyResults);
-                        break;
-                    case "comments":
-                        GenerateCommentsReport(surveyResults);
-                        break;
-                    case "tasks":
-                        GenerateTasksReport(surveyResults);
-                        break;
-                    case "quit":
-                        quitApp = true;
-                        break;
-                    default:
-                        Console.WriteLine("Sorry, that's not a valid option.");
-                        break;
+                    quitApp = true;
+                } 
+                else
+                {
+                    Console.WriteLine("Please specify which quarter of data: (q1, q2)");
+                    var selectedData = Console.ReadLine();
+
+                    var surveyResults = JsonConvert.DeserializeObject<SurveyResults>
+                        (File.ReadAllText($"data/{selectedData}.json"));
+
+                    switch (selectedReport)
+                    {
+                        case "rewards":
+                            GenerateWinnerEmails(surveyResults);
+                            break;
+                        case "comments":
+                            GenerateCommentsReport(surveyResults);
+                            break;
+                        case "tasks":
+                            GenerateTasksReport(surveyResults);
+                            break;
+                        default:
+                            Console.WriteLine("Sorry, that's not a valid option.");
+                            break;
+                    }
                 }
 
                 Console.WriteLine();
