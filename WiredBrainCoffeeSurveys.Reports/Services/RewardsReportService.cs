@@ -14,7 +14,7 @@ namespace WiredBrainCoffeeSurveys.Reports.Services
             var selectedEmails = new List<string>();
             int counter = 0;
 
-            Console.WriteLine(Environment.NewLine + "Selected Winners Output:");
+            Console.WriteLine(Environment.NewLine + $"Selected Winners Output for {results.Quarter}:");
             while (selectedEmails.Count < 2 && counter < results.Responses.Count)
             {
                 var currentItem = results.Responses[counter];
@@ -28,7 +28,7 @@ namespace WiredBrainCoffeeSurveys.Reports.Services
                 counter++;
             }
 
-            File.WriteAllLines("WinnersReport.csv", selectedEmails);
+            File.WriteAllLines($"WinnersReport_{results.Quarter}.csv", selectedEmails);
         }
 
     }

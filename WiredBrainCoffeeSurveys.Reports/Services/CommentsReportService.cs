@@ -13,7 +13,7 @@ namespace WiredBrainCoffeeSurveys.Reports.Services
         {
             var comments = new List<string>();
 
-            Console.WriteLine(Environment.NewLine + "Comments Output:");
+            Console.WriteLine(Environment.NewLine + $"Comments Output for {results.Quarter}:");
             for (var i = 0; i < results.Responses.Count; i++)
             {
                 var currentResponse = results.Responses[i];
@@ -34,7 +34,7 @@ namespace WiredBrainCoffeeSurveys.Reports.Services
                 }
             }
 
-            File.WriteAllLines("CommentsReport.csv", comments);
+            File.WriteAllLines($"CommentsReport_{results.Quarter}.csv", comments);
         }
     }
 }

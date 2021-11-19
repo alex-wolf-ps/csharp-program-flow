@@ -6,6 +6,9 @@ namespace WiredBrainCoffeeSurveys.Reports
 {
     public class SurveyResults
     {
+        //Metadata
+        public string Quarter { get; set; }
+
         // Aggregate ratings
         public double ServiceScore { get; set; }
 

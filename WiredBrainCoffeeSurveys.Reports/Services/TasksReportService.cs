@@ -44,13 +44,13 @@ namespace WiredBrainCoffeeSurveys.Reports.Services
                 _ => "Investigate individual comments for ideas."
             });
 
-            Console.WriteLine(Environment.NewLine + "Tasks Output:");
+            Console.WriteLine(Environment.NewLine + $"Tasks Output for {results.Quarter}:");
             foreach (var task in tasks)
             {
                 Console.WriteLine(task);
             }
 
-            File.WriteAllLines("TasksReport.csv", tasks);
+            File.WriteAllLines($"TasksReport_{results.Quarter}.csv", tasks);
         }
     }
 }
