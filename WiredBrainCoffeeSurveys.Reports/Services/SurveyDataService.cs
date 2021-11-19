@@ -10,10 +10,13 @@ namespace WiredBrainCoffeeSurveys.Reports.Services
 {
     class SurveyDataService
     {
-        public static SurveyResults GetSurveyDataByFileName(string fileName)
+        public static SurveyResults GetSurveyDataByFileName()
         {
+            Console.WriteLine("Please specify which quarter of data: q1 or q2");
+            var selectedFile = Console.ReadLine();
+            
             return JsonConvert.DeserializeObject<SurveyResults>
-                    (File.ReadAllText($"data/{fileName}.json"));
+                    (File.ReadAllText($"data/{selectedFile}.json"));
         }
     }
 }
