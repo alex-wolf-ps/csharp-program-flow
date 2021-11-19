@@ -13,16 +13,12 @@ namespace WiredBrainCoffeeSurveys.Reports
         static void Main(string[] args)
         {
             bool quitApp = false;
+            var surveyResults = SurveyDataService.GetSurveyDataByFileName();
 
             do
             {
-                Console.WriteLine("Please specify a report to run (rewards, comments, tasks, quit):");
+                Console.WriteLine("Please specify a report to run or other option: rewards, comments, tasks, dataChange, or quit");
                 var selectedReport = Console.ReadLine();
-
-                Console.WriteLine("Please specify which quarter of data: (q1, q2)");
-                var selectedFile = Console.ReadLine();
-
-                var surveyResults = SurveyDataService.GetSurveyDataByFileName(selectedFile);
 
                 switch (selectedReport)
                 {
@@ -34,6 +30,9 @@ namespace WiredBrainCoffeeSurveys.Reports
                         break;
                     case "tasks":
                         TasksReportService.GenerateTasksReport(surveyResults);
+                        break;
+                    case "dataChange":
+                        surveyResults = SurveyDataService.GetSurveyDataByFileName();
                         break;
                     case "quit":
                         quitApp = true;
