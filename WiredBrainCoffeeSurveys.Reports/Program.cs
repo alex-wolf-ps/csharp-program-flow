@@ -17,24 +17,24 @@ namespace WiredBrainCoffeeSurveys.Reports
 
             do
             {
-                Console.WriteLine("Please specify a report to run or other option: rewards, comments, tasks, dataChange, or quit");
+                Console.WriteLine("Please specify a report to run or other option: (r)ewards, (c)omments, (t)asks, (d)ataChange, or (q)uit");
                 var selectedReport = Console.ReadLine();
 
                 switch (selectedReport)
                 {
-                    case "rewards":
+                    case "rewards" or "r":
                         RewardsReportService.GenerateWinnerEmails(surveyResults);
                         break;
-                    case "comments":
+                    case "comments" or "c":
                         CommentsReportService.GenerateCommentsReport(surveyResults);
                         break;
-                    case "tasks":
+                    case "tasks" or "t":
                         TasksReportService.GenerateTasksReport(surveyResults);
                         break;
-                    case "dataChange":
+                    case "dataChange" or "d":
                         surveyResults = SurveyDataService.GetSurveyDataByFileName();
                         break;
-                    case "quit":
+                    case "quit" or "q":
                         quitApp = true;
                         break;
                     default:
